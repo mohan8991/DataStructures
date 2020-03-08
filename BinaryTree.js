@@ -12,10 +12,21 @@ class BinaryTree {
     }
 
     insert(data){
+        let newNode = new Node(data);
         if(this.root==null){
-            let newNode = new Node(data)
             this.root = newNode;
+        } else {
+            this.insertNode(this.root, newNode);
         }
+    }
+
+    insertNode(node, newNode){
+        if(newNode.data < node){
+            node.left = newNode;
+        } else if (newNode.data > node) {
+            node.right = newNode;
+        }
+
     }
 
     search(){}
