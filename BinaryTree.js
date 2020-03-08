@@ -11,10 +11,14 @@ class BinaryTree {
         this.root = null;
     }
 
-    insert(){}
+    insert(data){
+        if(this.root==null){
+            let newNode = new Node(data)
+            this.root = newNode;
+        }
+    }
+
     search(){}
     traverse(){}
     remove(){}
 }
-
-
